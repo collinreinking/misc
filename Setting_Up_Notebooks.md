@@ -105,15 +105,32 @@ cp -rf ~/.ipython/profile_pyspark /home/w205/.ipython/
 
 ###END of block to copy and paste into ec2 terminal###
 ```
+### Install findspark
+almost there, **execute**
+```bash
+pip install findspark
+```
+This package will allow you to use spark inside of your notebooks.
 
-You should be ready to go now.
+
+### Connect to your notebooks
 
 You can get ipython notebooks running by executing:
 ```bash
 ipython notebook --profile pyspark
 ```
-
 Then open a browser window and go to your `https://<instance url>:8888`  
 You may be told that you connection isn't private.  
 just click where it says `ADVANCED` and then click the link at the bottom that says "Proceed To..."  
 You will be asked to type in a password, this password should be the one that you entered in python near the start of this walkthrough.  
+
+### Accessing spark from notebook
+In order to get your spark context (just like you would have in pyspark) execute this block in your notebook (You'll need to do this everytime)
+```python
+import findspark
+findspark.init(‘/data/spark15’)
+import pyspark
+sc = pyspark.SparkContext(appName=“your_appname”)
+```
+your_appnam can be anything you want
+
