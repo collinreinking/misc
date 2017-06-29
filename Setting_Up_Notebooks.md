@@ -89,7 +89,7 @@ c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False  #so that the ipython notebook does not opens up a browser by default
 c.NotebookApp.password = u'$NOTEBOOK_PASS'  #the encrypted password we generated earlier
 # It is a good idea to put it on a known, fixed port
-c.NotebookApp.port = 8088
+c.NotebookApp.port = 8888
 
 EOF
 #create a new file that has the new code block and then the original config file.
