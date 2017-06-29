@@ -113,7 +113,7 @@ You can get ipython notebooks running by executing:
 ipython notebook --profile pyspark
 ```
 
-Then open a browser window and go to your https://<instance url>:8888  
+Then open a browser window and go to your `https://<instance url>:8888`  
 You may be told that you connection isn't private.  
 just click where it says `ADVANCED` and then click the link at the bottom that says "Proceed To..."  
 You will be asked to type in a password, this password should be the one that you entered in python near the start of this walkthrough.  
