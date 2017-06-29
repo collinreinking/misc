@@ -66,7 +66,7 @@ cd /home/w205/certs
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
 cd ~
 ```
-You will be asked some questions, just go ahead and answer them.  the final result is a file called `jupiter_notebook_cert.pem`.
+You will be asked some questions, just go ahead and answer them.  the final result is a file called `mycert.pem` in `/home/w205/certs`. You may want to double check that it's there with `ls /home/w205/certs`.
 
 ### Configuring jupyter
 There is a block of code that we need to add to the start of a file called `ipython_notebook_config.py` inside of `~/.ipython/profile_pyspark` but the code below will do this for you.
